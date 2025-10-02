@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>.cpl Shortcut Flashcards — Multiple Choice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Shortcut Flashcards Windows Commandos</h1>
+        <p class="subtitle">Multiple-choice quiz for Windows Control Panel (.cpl) commands — 4 cards.</p>
+      </header>
+
+      <section class="card" id="card">
+        <div class="progress" id="progress"></div>
+
+        <h2 id="question" class="question">Question will appear here</h2>
+
+        <form id="answer-form" autocomplete="off">
+          <fieldset id="choices" class="choices" aria-describedby="question">
+            <!-- options injected by app.js -->
+          </fieldset>
+
+          <div class="actions">
+            <button class="btn" id="submit-btn" type="submit">Check</button>
+            <button class="btn btn-secondary" id="next-btn" type="button" hidden>Next</button>
+          </div>
+        </form>
+
+        <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+      </section>
+
+      <footer class="footer">
+        <details>
+          <summary>Edit questions</summary>
+          <p>Open <code>app.js</code> and modify the <code>cards</code> array. Each card has:</p>
+          <pre><code>{
+  prompt: "Which command opens the Mouse Properties dialog?",
+  options: ["main.cpl", "sysdm.cpl", "ncpa.cpl", "intl.cpl"],
+  answerIndex: 0,
+  explainCorrect: "Correct: 'main.cpl' opens Mouse Properties.",
+  explainWrong: (pickedLabel, correctLabel) =&gt; `No — ${pickedLabel} is not Mouse Properties. Use ${correctLabel}.`
+}</code></pre>
+        </details>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
